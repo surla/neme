@@ -19,7 +19,10 @@ class Book {
     var rating: Int?
     var emotions:  [Emotion]
     
-    init(title: String, author: String, coverURL: String? = nil, status: ReadingStatus = .reading, startDate: Date = Date.now, finishedDate: Date? = nil, rating: Int? = nil, emotions: [Emotion] = []) {
+    @Relationship(deleteRule: .cascade)
+    var passages: [Passage]
+    
+    init(title: String, author: String, coverURL: String? = nil, status: ReadingStatus = .reading, startDate: Date = Date.now, finishedDate: Date? = nil, rating: Int? = nil, emotions: [Emotion] = [], passages: [Passage] = []) {
         self.title = title
         self.author = author
         self.coverURL = coverURL
@@ -28,5 +31,6 @@ class Book {
         self.finishedDate = finishedDate
         self.rating = rating
         self.emotions = emotions
+        self.passages = passages
     }
 }
