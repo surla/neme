@@ -1,5 +1,5 @@
 //
-//  Passage.swift
+//  Note.swift
 //  neme
 //
 //  Created by surla on 9/15/26.
@@ -9,18 +9,18 @@ import Foundation
 import SwiftData
 
 @Model
-class Passage {
+class Note {
     var text: String
-    var pageNumber: Int
     var book: Book
     var dateAdded: Date
-    var notes: [Note]
     
-    init(text: String, pageNumber: Int, book: Book, dateAdded: Date = .now, notes: [Note] = []) {
+    @Relationship(deleteRule: .nullify)
+    var passage: Passage?
+    
+    init(text: String, book: Book, dateAdded: Date = .now, passage: Passage? = nil) {
         self.text = text
-        self.pageNumber = pageNumber
         self.book = book
         self.dateAdded = dateAdded
-        self.notes = notes
+        self.passage = passage
     }
 }
