@@ -6,9 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5126CC34305DC3D900E97DF4 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5126CC33305DC3D900E97DF4 /* Secrets.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		5126CC2A305C7AFA00E97DF4 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		5126CC2B305C7C8B00E97DF4 /* Secrets.xcconfig.example */ = {isa = PBXFileReference; lastKnownFileType = text; path = Secrets.xcconfig.example; sourceTree = "<group>"; };
+		5126CC33305DC3D900E97DF4 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		5182B4473058ABDF00C8EDC1 /* neme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = neme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -49,6 +54,7 @@
 			children = (
 				5126CC2A305C7AFA00E97DF4 /* Secrets.xcconfig */,
 				5126CC2B305C7C8B00E97DF4 /* Secrets.xcconfig.example */,
+				5126CC33305DC3D900E97DF4 /* Secrets.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -144,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5126CC34305DC3D900E97DF4 /* Secrets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
