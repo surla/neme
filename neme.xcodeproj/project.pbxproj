@@ -12,9 +12,22 @@
 		5182B4473058ABDF00C8EDC1 /* neme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = neme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5126CC30305CB90C00E97DF4 /* Exceptions for "neme" folder in "neme" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 5182B4463058ABDF00C8EDC1 /* neme */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		5182B4493058ABDF00C8EDC1 /* neme */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5126CC30305CB90C00E97DF4 /* Exceptions for "neme" folder in "neme" target */,
+			);
 			path = neme;
 			sourceTree = "<group>";
 		};
@@ -267,6 +280,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = neme/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -298,6 +312,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = neme/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
