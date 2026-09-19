@@ -6,13 +6,33 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5126CC34305DC3D900E97DF4 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5126CC33305DC3D900E97DF4 /* Secrets.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		5126CC2A305C7AFA00E97DF4 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		5126CC2B305C7C8B00E97DF4 /* Secrets.xcconfig.example */ = {isa = PBXFileReference; lastKnownFileType = text; path = Secrets.xcconfig.example; sourceTree = "<group>"; };
+		5126CC33305DC3D900E97DF4 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		5182B4473058ABDF00C8EDC1 /* neme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = neme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5126CC30305CB90C00E97DF4 /* Exceptions for "neme" folder in "neme" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 5182B4463058ABDF00C8EDC1 /* neme */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		5182B4493058ABDF00C8EDC1 /* neme */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5126CC30305CB90C00E97DF4 /* Exceptions for "neme" folder in "neme" target */,
+			);
 			path = neme;
 			sourceTree = "<group>";
 		};
@@ -29,9 +49,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5126CC29305C799500E97DF4 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				5126CC2A305C7AFA00E97DF4 /* Secrets.xcconfig */,
+				5126CC2B305C7C8B00E97DF4 /* Secrets.xcconfig.example */,
+				5126CC33305DC3D900E97DF4 /* Secrets.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		5182B43E3058ABDF00C8EDC1 = {
 			isa = PBXGroup;
 			children = (
+				5126CC29305C799500E97DF4 /* Configuration */,
 				5182B4493058ABDF00C8EDC1 /* neme */,
 				5182B4483058ABDF00C8EDC1 /* Products */,
 			);
@@ -78,7 +109,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2660;
-				LastUpgradeCheck = 2660;
+				LastUpgradeCheck = 2700;
 				TargetAttributes = {
 					5182B4463058ABDF00C8EDC1 = {
 						CreatedOnToolsVersion = 26.6;
@@ -119,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5126CC34305DC3D900E97DF4 /* Secrets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +159,7 @@
 /* Begin XCBuildConfiguration section */
 		5182B4503058ABE000C8EDC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5126CC2A305C7AFA00E97DF4 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -190,6 +223,7 @@
 		};
 		5182B4513058ABE000C8EDC1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5126CC2A305C7AFA00E97DF4 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -253,6 +287,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = neme/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +319,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = neme/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
