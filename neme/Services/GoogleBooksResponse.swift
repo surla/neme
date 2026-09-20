@@ -18,7 +18,7 @@ struct BookVolume: Codable {
 
 struct VolumeInfo: Codable {
     let title: String
-    let authors: [String]
+    let authors: [String]?
     let publishedDate: String?
     let imageLinks: [String: String]?
 }
@@ -27,7 +27,7 @@ extension BookSearchResult {
     init(from volume: BookVolume) {
         self.id = volume.id
         self.title = volume.volumeInfo.title
-        self.authors = volume.volumeInfo.authors
+        self.authors = volume.volumeInfo.authors ?? []
         self.coverURL = volume.volumeInfo.imageLinks?["thumbnail"]
         self.publicationYear = volume.volumeInfo.publishedDate
     }
