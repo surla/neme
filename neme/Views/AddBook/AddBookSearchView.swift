@@ -20,6 +20,8 @@ struct AddBookSearchView: View {
         do {
             let service = BookSearchService()
             results = try await service.search(query:  query)
+        } catch let error as URLError where error.code == .cancelled {
+            // ignore
         } catch {
             print("Search failed: \(error)")
             errorMessage = "Something went wrong. Please try again"
@@ -30,8 +32,20 @@ struct AddBookSearchView: View {
         
     var body: some View {
         NavigationStack {
-            List(results) { result in
-                Text(result.title)
+            Group {
+                if isSearching {
+                    ProgressView("Searching...")
+                } else if let errorMessage {
+                    ContentUnavailableView(errorMessage, systemImage: "exclamationmark.triangle")
+                } else if query.isEmpty {
+                    ContentUnavailableView("Search for a book", systemImage: "magnifyingglass")
+                } else if results.isEmpty {
+                    ContentUnavailableView("No books found", systemImage: "book.closed")
+                } else {
+                    List(results) { result in
+                        Text(result.title)
+                    }
+                }
             }
             .searchable(text: $query, prompt: "Search title, author, ISBN")
             .task(id: query) {
