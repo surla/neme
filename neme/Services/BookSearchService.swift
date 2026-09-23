@@ -20,6 +20,7 @@ struct BookSearchResult: Identifiable, Hashable {
     let authors: [String]
     let coverURL: String?
     let publicationYear: String?
+    let categories: [String]
 }
 
 struct BookSearchService {

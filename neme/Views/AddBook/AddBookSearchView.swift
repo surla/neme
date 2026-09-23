@@ -52,7 +52,6 @@ struct AddBookSearchView: View {
                                     Image(systemName: "book.closed")
                                         .foregroundStyle(.secondary)
                                 }
-                                .onAppear { print("Cover URL: \(result.coverURL ?? "nil")") }
                                 .frame(width: 44, height: 62)
                                 
                                 VStack(alignment: .leading, spacing: 2) {
