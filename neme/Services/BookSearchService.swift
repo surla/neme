@@ -14,7 +14,7 @@ enum BookSearchError: Error {
     case badStatusCode
 }
 
-struct BookSearchResult: Identifiable {
+struct BookSearchResult: Identifiable, Hashable {
     let id: String
     let title: String
     let authors: [String]
