@@ -43,7 +43,26 @@ struct AddBookSearchView: View {
                     ContentUnavailableView("No books found", systemImage: "book.closed")
                 } else {
                     List(results) { result in
-                        Text(result.title)
+                        HStack(spacing: 12) {
+                            let secureURLString = result.coverURL?.replacingOccurrences(of: "http://", with: "https://")
+                            AsyncImage(url: URL(string: secureURLString ?? "")) { image in
+                                image.resizable().aspectRatio(contentMode: .fit)
+                            } placeholder: {
+                                Image(systemName: "book.closed")
+                                    .foregroundStyle(.secondary)
+                            }
+                            .onAppear { print("Cover URL: \(result.coverURL ?? "nil")") }
+                            .frame(width: 44, height: 62)
+                            
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(result.title)
+                                    .font(.subheadline)
+                                    .fontWeight(.semibold)
+                                Text(result.authors.joined(separator: ", "))
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
                     }
                 }
             }
